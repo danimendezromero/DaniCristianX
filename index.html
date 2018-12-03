@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chat</title>
+</head>
+
+<body>
+  <div class="myUL">
+
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var iduser = '';
+            $.ajax({
+                url: "api_chat/public/getAllUsers",
+                type: "GET",
+                error: function() {
+                    alert("Hi ha agut un Error");
+                },
+                success: function(response) {
+                    var nom = "";
+                    $.each(response.result, function(i, item) {
+                        nom += "<li>";
+                        nom += "<a id=" + item.id + ">" + item.name;
+                    });
+                    $(".myUL").html(nom);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
