@@ -4,15 +4,11 @@
 <head>
     <meta charset="utf-8">
     <title>Chat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
-  <div class="myUL">
-
-  </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-
     <script type="text/javascript">
         $(document).ready(function() {
             var iduser = '';
@@ -28,11 +24,24 @@
                         nom += "<li>";
                         nom += "<a id=" + item.id + ">" + item.name;
                     });
-                    $(".myUL").html(nom);
+                    $("#myUl").html(nom);
                 }
             });
         });
     </script>
+    <!-- BUSCAR USUARIO -->
+    <div>
+        <input id="myInput" onkeyup="filtrar()" type="text"> </input>
+    </div>
+    <br>
+    <div>
+        <input id="input-text-user" type="text" name="" value="">
+        <button id="btn-submit" onclick="">Submit</button>
+    </div>
+    <div>
+        <ul id="myUl">
+        </ul>
+    </div>
 </body>
 
 </html>
