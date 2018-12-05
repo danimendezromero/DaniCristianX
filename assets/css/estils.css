@@ -1,0 +1,209 @@
+/* ========== Global styles ============== */
+body, html{
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+body{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* ========== Navbar/Footer CSS ============== */
+ul{
+  width:100%;
+}
+li {
+  font-size: 13px;
+}
+@media only screen and (max-width : 990px)  {
+  .buscarm{
+    margin-left: unset !important;
+  }
+  #buscadorm{
+    margin-left: 25%;
+  }
+}
+@media only screen and (min-width : 990px) and (max-width : 1300px)  {
+  .menu{
+    margin-left: 10%;
+  }
+  #iniciar{
+    margin-left: 1%;
+  }
+  #registrar{
+    margin-right: 1%;
+  }
+  #buscar{
+    margin-left: unset;
+  }
+  #buscador{
+    margin-left: 7%;
+  }
+}
+@media only screen and (min-width : 1300px) and (max-width : 1500px)  {
+  .menu{
+    margin-left: 15%;
+  }
+  #iniciar{
+    margin-left: 2%;
+  }
+  #registrar{
+    margin-right: 1%;
+  }
+  #buscar{
+    margin-left: unset;
+  }
+  #buscador{
+    margin-left: 20%;
+  }
+}
+@media only screen and (min-width : 1500px) and (max-width : 1700px)  {
+  .menu{
+    margin-left: 18%;
+  }
+  #iniciar{
+    margin-left: 2%;
+  }
+  #registrar{
+    margin-right: 1%;
+  }
+  #buscar{
+    margin-left: unset;
+  }
+  #buscador{
+    margin-left: 25%;
+  }
+}
+@media only screen and (min-width : 1700px) and (max-width : 1900px) {
+  .menu{
+    margin-left: 20%;
+  }
+  #iniciar{
+    margin-left: 2%;
+  }
+  #registrar{
+    margin-right: 1%;
+  }
+  #buscar{
+    margin-left: unset;
+  }
+  #buscador{
+    margin-left: 30%;
+  }
+}
+@media only screen and (min-width : 1900px) {
+  .menu{
+    margin-left: 25%;
+  }
+  #iniciar{
+    margin-left: 2%;
+  }
+  #registrar{
+    margin-right: 1%;
+  }
+  #buscar{
+    margin-left: unset;
+  }
+  #buscador{
+    margin-left: 30%;
+  }
+}
+@media only screen and (max-width: 993px) {
+  .este {
+      text-align: center;
+  }
+  .este1{
+    display: none;
+  }
+  .este2{
+    display: none;
+  }
+  .este3{
+    display: none;
+  }
+  .este4{
+    display: none;
+  }
+}
+.logon{
+  margin-top: 0.2em;
+  margin-left: 0.5em;
+}
+.divider-left{
+  border-left: 1px solid #e0e0e0;
+}
+.divider-right{
+  border-right: 1px solid #e0e0e0;
+}
+nav .divider-left, nav .divider-right{
+  font-weight: bold;
+}
+.logo1{
+  margin-right: 20px;
+}
+.foot{
+  font-size:13px;
+}
+.logof{
+  margin-top: 0.2em;
+  margin-left: 0.2em;
+  width: 65px;
+  height: 65px;
+  margin-top: 30px;
+  opacity: 0.5;
+}
+.logom{
+    margin-left: 40%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+/* ========== End of Navbar/Footer CSS ============== */
+/* ========== FAQ web CSS ============== */
+.faq{
+  min-height: 100%;
+}
+.faq1{
+  margin-top:10%;
+}
+.faq1 li>a:hover, .faq1 .collapsible-header:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.faq1 .collapsible-body li a{
+  padding: 0 23.5px 0 31px;
+}
+.faq1 li{
+  float:none;
+  line-height: 48px;
+}
+.faq1 li>a{
+  color: rgba(0, 0, 0, 0.87);
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  line-height: 48px;
+}
+.faq1 .collapsible-body{
+  padding: 0;
+}
+.active>.collapsible-header{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.faqcontent{
+  background-color: rgba(255, 255, 255, 1);
+  margin-top:10%;
+  height: 40em;
+  margin-bottom: 10%;
+}
+
+/* ========== end of FAQ web CSS ============== */
+/* ========== Login web CSS ============== */
+.cuadrado1{
+  margin-top: -30px;
+}
+.cuadrado2{
+      margin-top: -10px;
+}
+/* ========== Login of FAQ web CSS ============== */  
