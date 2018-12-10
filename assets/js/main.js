@@ -1,18 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-    var elems2 = document.querySelectorAll('.collapsible');
-    var instances2 = M.Collapsible.init(elems, options);
+var usersid = "";
+$.ajax({
+  url:"api_chat/public/getAllUsers",
+  type:"GET",
+  success: function(response){
+       usersid = response.result;
+  }
 });
-// Initialize collapsible (uncomment the lines below if you use the dropdown variation)
-// var collapsibleElem = document.querySelector('.collapsible');
-// var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
-// Or with jQuery
+function filtrar() {
+    var input, filter, ul, li, a, i;
+    input = $("#myInput");
+    filter = input.val().toUpperCase();
+    $("#myUl").each(function(){
+      li = $(this).find("li");
+    });
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
 
-$(document).ready(function(){
-  $('.collapsible').collapsible();
-  $('.sidenav').sidenav();
-  $(".dropdown-trigger").dropdown({
-    hover: true
-  });
-});
+        }
+    }
+}
