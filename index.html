@@ -37,14 +37,14 @@
       </div>
     </form>
   </div>
-<!-- BUSCAR USUARIO -->
+  <!-- BUSCAR USUARIO -->
   <div class="row">
     <div class="col s12 m3">
       <div class="card grey lighten-2">
-        <div class="">
-          <label style="font-size: 30px;"id="user"></label>
-        </div>
         <div class="card-content white-text">
+          <div class="input-field  s12">
+            <p id="user" class="grey-text text-darken-3" style="font-size: 20px;"> <p>
+          </div>
           <div class="input-field  s12">
             <input id="myInput" onkeyup="filtrar()" type="text" class="">
             <label for="text">Filtrar</label>
@@ -60,7 +60,7 @@
     <div class="col s12 m9">
       <div class="card white-grey darken-1">
         <div class="card-content white-text">
-          <div class="input-field  s12" style="height:383px;">
+          <div class="input-field  s12" style="height:385px;">
 
           </div>
           <div class="card-action">
@@ -97,28 +97,27 @@
           $("#myUl").html(nom);
         }
       });
-      $("#btn-submit").click(function(){
+      $("#btn-submit").click(function() {
         var iduser = "";
         var username = $("#input-text-user").val();
-        $("#user").html(username);
+        $("#user").html("Bienvenido: " + username);
 
         $.ajax({
-          url:"api_chat/public/getId/"+username,
-          type:"GET",
-          error: function(){
+          url: "api_chat/public/getId/" + username,
+          type: "GET",
+          error: function() {
             alert("Hi ha agut un Error");
           },
-          success: function(response){
-              iduser = response.result;
+          success: function(response) {
+            iduser = response.result;
           }
-        }).done(function(result){
+        }).done(function(result) {
           alert("DONE!!");
-        }).error(function(result){
+        }).error(function(result) {
           alert("ERROR!!");
         });
       });
     });
-
   </script>
 </body>
 
